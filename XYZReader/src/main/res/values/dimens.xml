@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- text sizes -->
+    <dimen name="text_size_app_bar">20sp</dimen>
+    <dimen name="text_size_sub_header">16sp</dimen>
+    <dimen name="text_size_body">14sp</dimen>
+    <dimen name="text_size_list_body">16sp</dimen>
+
+    <!-- sizes -->
+    <dimen name="list_item_height">88dp</dimen>
+
+    <!-- margins -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+
+    <!-- elevation -->
+    <dimen name="elevation_app_bar">4dp</dimen>
+    <dimen name="fab_elevation">6dp</dimen>
+    <dimen name="fab_elevation_pressed">12dp</dimen>
+
+
+</resources>
