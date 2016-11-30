@@ -16,6 +16,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.text.format.DateUtils;
 import android.view.View;
@@ -75,7 +76,7 @@ public class ArticleListActivity extends AppCompatActivity implements
                 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
                 @Override
                 public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                    if (0== mRecyclerView.computeVerticalScrollOffset()) {
+                    if (0 == mRecyclerView.computeVerticalScrollOffset()) {
                         appBarLayout.setElevation(0);
 
                         Timber.d("down");
@@ -136,7 +137,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         Adapter adapter = new Adapter(cursor);
         adapter.setHasStableIds(true);
         mRecyclerView.setAdapter(adapter);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
     }
 
     @Override
@@ -187,6 +188,8 @@ public class ArticleListActivity extends AppCompatActivity implements
                 Picasso
                         .with(holder.itemView.getContext())
                         .load(url)
+                        .placeholder(R.drawable.ic_place_holder)
+                        .error(R.drawable.ic_place_holder)
                         .into(holder.thumbnailView);
         }
 

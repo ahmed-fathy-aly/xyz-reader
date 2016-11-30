@@ -135,7 +135,7 @@ public class ArticleDetailFragment extends Fragment {
 
 
     @OnClick(R.id.fab)
-    public void onFavClicked(){
+    public void onFavClicked() {
         startActivity(Intent.createChooser(ShareCompat.IntentBuilder.from(getActivity())
                 .setType("text/plain")
                 .setText(mData.getBody())
